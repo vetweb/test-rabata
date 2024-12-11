@@ -1,0 +1,554 @@
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-base);
+    margin: 0;
+    padding: var(--spacing);
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+._hide-down-lg {
+    display: none !important;
+}
+
+/* Стили ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Основные заголовки */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.chart-info {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-medium);
+    margin: var(--spacing) 0;
+}
+.chart-info__item-title-count {
+    font-size: 24px;
+}
+.chart-info__item-title {
+    font-size: 18px;
+    color:var(--color-text-second);
+}
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.blue {
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* Кнопки */
+.button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: 1px solid transparent;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.button:hover {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border-color: var(--color-primary);
+}
+
+.button--white {
+    color: var(--color-primary);
+    background: var(--color-secondary);
+}
+
+.button--white:hover {
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}
+
+.button--arrow {
+    position: relative;
+}
+.button--arrow img {
+    transition: all .3s;
+}
+.button--arrow:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background: url('/test-rabata/assets/images/icons/IconArrowRightWhite.svg') no-repeat center;
+    background-size: contain;
+    transition: all .3s;
+    transform: translateX(-100%);
+
+}
+.button--arrow:hover:after {
+    transform: translateX(0);
+}
+.button--arrow:hover img {
+    transform: translateX(100%);
+}
+
+/* Сетка */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    padding: 10px;
+}
+
+.title {
+    color: var(--color-text);
+}
+
+.title--medium {
+    font-size: var(--font-size-title-base);
+}
+
+.title--semi-medium {
+    font-size: var(--font-size-title-base);
+}
+
+.fz-medium {
+    font-size: var(--font-size-small);
+}
+
+.fz-small {
+    font-size: var(--font-size-small);
+}
+.mb-base {
+    margin-bottom: var(--spacing);
+}
+.mb-small {
+    margin-bottom: var(--spacing-small);
+}
+.mb-medium {
+    margin-bottom: var(--spacing);
+}
+.mt-small {
+    margin-top: var(--spacing-small);
+}
+
+/* Стили для слайдера месяцев */
+.month-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.month-slider__arrow {
+    flex: 0 0 auto;
+    border: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    color: #ffffff;
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+.months__btn  {
+    flex: 0 0 auto;
+    padding: var(--spacing);
+    background: var(--bg-menu-item-bg);
+    border: 1px solid transparent;
+    color: var(--color-text);
+    border-radius: 8px;
+    font-size: var(--font-size-small);
+    transition: all .2s;
+    list-style: none;
+    cursor: pointer;
+}
+
+.months {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    margin: 0 10px;
+    gap: 8px;
+}
+
+.months__btn.active,
+.months__btn:hover {
+    border-color: var(--color-primary);
+}
+
+/* Стили для графиков */
+.chart {
+    width: 100%;
+    margin-top: 20px;
+    overflow-x: auto; /* Включить горизонтальный скролл */
+}
+
+.chart canvas {
+    width: 100%; /* График адаптируется под родительский контейнер */
+    max-width: 100%; /* Ограничиваем максимальную ширину графика */
+    height: 500px; /* Сохраняем пропорции */
+}
+
+/* Стили блока новостей */
+
+.meta-info {
+    font-size: var(--font-size-smaller);
+    color: var(--color-meta);
+}
+
+.news-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: var(--spacing);
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+}
+
+.news-big {
+    flex: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.news-big__link {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.news-big__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius);
+    z-index: 1;
+}
+
+.news-big__image-wrapper:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: var(--color-primary);
+    opacity: .5;
+    z-index: 1;
+}
+
+.news-big__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s ease;
+}
+
+.news-big:hover .news-big__image {
+    transform: scale(1.2, 1.2) rotate(1deg);
+}
+
+.news-big__content {
+    width: 100%;
+    position: absolute;
+    padding: var(--spacing-medium) var(--spacing) var(--spacing);
+    bottom: 50px;
+    left: 0;
+    color: var(--color-secondary);
+    text-align: left;
+    z-index: 3;
+}
+
+.news-big__title {
+    font-size: var(--font-size-medium);
+    margin-bottom: 0;
+    color: var(--color-secondary);
+}
+.news-big__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    gap: var(--spacing-small);
+    z-index: 4;
+}
+.news-big__button {
+    overflow: hidden;
+    height: 45px;
+}
+
+.news-block__button-icon {
+    font-size: var(--font-size-semi-medium);
+}
+
+.news-block__sidebar {
+    flex: 1;
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    gap: var(--spacing);
+    background-color: var(--bg-news-block);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+}
+
+.news-block__item {
+    margin-bottom: var(--spacing);
+    font-size: var(--font-size-medium);
+}
+
+.news-block__item:last-child {
+    margin-bottom: 0;
+}
+
+.news-block__item-title {
+    margin-bottom: 4px;
+}
+
+.news-block__item-text {
+    color: var(--color-text-second);
+    margin-bottom: 4px;
+}
+
+
+/* Latest News */
+.news-section__title {
+    font-size: var(--font-size-large);
+    margin: var(--spacing-medium) 0 var(--spacing);
+    color: var(--color-primary);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing);
+    margin-bottom: var(--spacing-medium);
+}
+
+.news-item__image-link {
+    display: block;
+    overflow: hidden;
+    height: 250px;
+    border-radius: var(--border-radius);
+}
+
+.news-item__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all .6s;
+}
+
+.news-item:hover .news-item__image {
+    transform: scale(1.2, 1.2) rotate(1deg);
+}
+
+.news-item__content {
+    margin: var(--spacing-small) 0;
+}
+
+.news-item__title {
+    margin-bottom: var(--spacing-small);
+    text-decoration: none;
+    display: block;
+    transition: all .2s;
+}
+
+.news-item__title:hover {
+    opacity: .6;
+}
+
+.news-item__summary {
+    margin-bottom: var(--spacing-small);
+    color: var(--color-text-second);
+}
+
+.news-item__meta {
+    margin: 0;
+}
+
+.news-section__button {
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+/* Для двух строк с многоточием */
+.news-item__title,
+.news-item__summary,
+.news-block__item-text {
+    display: -webkit-box; /* Включаем flex-бокс с ограничением линий */
+    -webkit-box-orient: vertical; /* Устанавливаем вертикальную ориентацию */
+    overflow: hidden; /* Скрываем всё, что выходит за пределы блока */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+    white-space: normal; /* Разрешаем переносы строк */
+    -webkit-line-clamp: 2; /* Обрезаем до двух строк */
+}
+
+/* Для одной строки с многоточием */
+.news-block__item-title {
+    display: block; /* Блоковый элемент */
+    overflow: hidden; /* Скрываем текст за пределами блока */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+    white-space: nowrap; /* Запрещаем перенос строки */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: var(--spacing-medium);
+    gap: var(--spacing-medium);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--spacing-small);
+    font-size: var(--font-size);
+    font-weight: 700;
+}
+
+.logo__icons {
+    flex: 0 0 auto;
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.logo__icons:after,
+.logo__icons:before {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    content: '';
+    transition: all .2s;
+}
+
+.logo__icons:after {
+    background: var(--bg-logo-primary);
+}
+
+.logo__icons:before {
+    top: 10px;
+    left: 10px;
+    background: var(--bg-logo-second);
+    z-index: 1;
+}
+
+.logo:hover .logo__icons:after {
+    transform: translate(-2px, -2px);
+}
+
+.logo:hover .logo__icons:before {
+    transform: translate(2px, 2px);
+}
+
+/* меню верхнее */
+.menu-nav__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--spacing-small);
+}
+
+.menu-nav__item::marker {
+    display: none;
+}
+
+.menu-nav__item {
+    background: var(--bg-menu-item-bg);
+    border: 1px solid transparent;
+    color: var(--color-text);
+    border-radius: 8px;
+    font-size: var(--font-size-small);
+    transition: all .2s;
+    list-style: none;
+}
+
+.menu-nav__item:hover {
+    border-color: var(--color-primary);
+}
+
+.menu-nav__item.active {
+    border-color: var(--color-primary);
+}
+
+.menu-nav__item-link {
+    display: block;
+    padding: var(--spacing);
+}

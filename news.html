@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/app-responsive.css">
+</head>
+<body>
+<div class="container">
+    <header class="header" role="banner">
+        <a href="#" class="header__logo logo" aria-label="World Trends Home">
+            <span class="logo__icons"></span>
+            World Trends</a>
+        <nav class="header__menu-nav menu-nav" role="navigation" aria-label="Main navigation">
+            <ul class="menu-nav__list">
+                <li class="menu-nav__item">
+                    <a href="/chart.html" class="menu-nav__item-link">Charts</a>
+                </li>
+                <li class="menu-nav__item active">
+                    <a href="/news.html" class="menu-nav__item-link" aria-current="page">News</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="news-block" aria-labelledby="featured-news">
+            <article class="news-big">
+                <a href="#" class="news-big__link" aria-hidden="true" tabindex="-1"></a>
+                <div class="news-big__image-wrapper">
+                    <img class="news-big__image"
+                         sizes="(min-width: 768px) 25vw, (min-width: 600px) 50vw, 100vw"
+                         srcset="/assets/images/news-img1.jpg 240w,
+                                 /assets/images/news-img1.jpg 320w,
+                                 /assets/images/news-img1.jpg 480w,
+                                 /assets/images/news-img1.jpg 640w,
+                                 /assets/images/news-img1.jpg 800w,
+                                 /assets/images/news-img1.jpg 1024w,
+                                 /assets/images/news-img1.jpg 1536w"
+                         src="/assets/images/news-img1.jpg"
+                         alt="Matt Gaetz quits House after he is picked by Trump for attorney general role"
+                    />
+                </div>
+                <div class="news-big__content">
+                    <h2 class="news-big__title">
+                        <a href="#">Matt Gaetz quits House after he is picked by Trump for attorney general role</a>
+                    </h2>
+                    <div class="_hide-down-lg">
+                        <div class="news-big__buttons">
+                            <a href="#" class="news-big__button button button--white">Explore</a>
+                            <a href="#" class="news-big__button button button--white button--arrow" aria-label="Go to news details">
+                                <img src="/assets/images/icons/IconArrowRight.svg" alt="Go to news details">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-big__buttons _hide-up-lg mt-small">
+                    <a href="#" class="news-big__button button">Explore</a>
+                    <a href="#" class="news-big__button button" aria-label="Go to news details">→</a>
+                </div>
+            </article>
+            <aside class="news-block__sidebar" aria-labelledby="related-news">
+                <div class="news-block__list">
+                    <article class="news-item mb-medium">
+                        <div class="news-item__content">
+                            <h3 class="news-item__title title title--medium">
+                                <a href="#" class="news-item__title-link">World’s largest coral found...</a>
+                            </h3>
+                            <div class="news-item__summary fz-medium">
+                                <p>The coral could be 500 years old...</p>
+                            </div>
+                            <span class="meta-info">2 hrs ago | Climate</span>
+                        </div>
+                    </article>
+                    <article class="news-item mb-medium">
+                        <div class="news-item__content">
+                            <h3 class="news-item__title title title--medium">
+                                <a href="#" class="news-item__title-link">World’s largest coral found...</a>
+                            </h3>
+                            <div class="news-item__summary fz-medium">
+                                <p>The coral could be 500 years old...</p>
+                            </div>
+                            <span class="meta-info">2 hrs ago | Climate</span>
+                        </div>
+                    </article>
+                    <article class="news-item mb-medium">
+                        <div class="news-item__content">
+                            <h3 class="news-item__title title title--medium">
+                                <a href="#" class="news-item__title-link">World’s largest coral found...</a>
+                            </h3>
+                            <div class="news-item__summary fz-medium">
+                                <p>The coral could be 500 years old...</p>
+                            </div>
+                            <span class="meta-info">2 hrs ago | Climate</span>
+                        </div>
+                    </article>
+                    <!-- Другие элементы -->
+                </div>
+            </aside>
+        </section>
+        <section class="news-section" aria-labelledby="latest-news">
+            <h2 id="latest-news" class="news-section__title">Latest News</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <a href="#" class="news-item__image-link">
+                        <img src="/assets/images/news-img1.jpg" alt="Inside the secret summit that tried to stop deadly rap wars" class="news-item__image"/>
+                    </a>
+                    <div class="news-item__content">
+                        <h3 class="news-item__title title title--semi-medium">
+                            <a href="#" class="news-item__title-link">Inside the secret summit that tried to stop deadly rap wars</a>
+                        </h3>
+                        <div class="news-item__summary fz-small"><p>Before Tupac's murder, producer Quincy Jones brought stars together...</p></div>
+                        <span class="meta-info">1 day ago | Culture</span>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <a href="#" class="news-item__image-link">
+                        <img src="/assets/images/news-img2.jpg" alt="Inside the secret summit that tried to stop deadly rap wars" class="news-item__image"/>
+                    </a>
+                    <div class="news-item__content">
+                        <h3 class="news-item__title title title--semi-medium">
+                            <a href="#" class="news-item__title-link">Inside the secret summit that tried to stop deadly rap wars</a>
+                        </h3>
+                        <div class="news-item__summary fz-small"><p>Before Tupac's murder, producer Quincy Jones brought stars together...</p></div>
+                        <span class="meta-info">1 day ago | Culture</span>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <a href="#" class="news-item__image-link">
+                        <img src="/assets/images/news-img3.webp" alt="Inside the secret summit that tried to stop deadly rap wars" class="news-item__image"/>
+                    </a>
+                    <div class="news-item__content">
+                        <h3 class="news-item__title title title--semi-medium">
+                            <a href="#" class="news-item__title-link">Inside the secret summit that tried to stop deadly rap wars</a>
+                        </h3>
+                        <div class="news-item__summary fz-small"><p>Before Tupac's murder, producer Quincy Jones brought stars together...</p></div>
+                        <span class="meta-info">1 day ago | Culture</span>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <a href="#" class="news-item__image-link">
+                        <img src="/assets/images/news-img1.jpg" alt="Inside the secret summit that tried to stop deadly rap wars" class="news-item__image"/>
+                    </a>
+                    <div class="news-item__content">
+                        <h3 class="news-item__title title title--semi-medium">
+                            <a href="#" class="news-item__title-link">Inside the secret summit that tried to stop deadly rap wars</a>
+                        </h3>
+                        <div class="news-item__summary fz-small"><p>Before Tupac's murder, producer Quincy Jones brought stars together...</p></div>
+                        <span class="meta-info">1 day ago | Culture</span>
+                    </div>
+                </article>
+            </div>
+            <button class="news-section__button button" aria-label="Load more news">Read more</button>
+        </section>
+    </main>
+</div>
+<script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts</title>
+    <link rel="stylesheet" href="/css/app-responsive.css">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<div class="container">
+    <header class="header" role="banner">
+        <a href="#" class="header__logo logo" aria-label="World Trends Home">
+            <span class="logo__icons"></span>
+            World Trends</a>
+        <nav class="header__menu-nav menu-nav" role="navigation" aria-label="Main navigation">
+            <ul class="menu-nav__list">
+                <li class="menu-nav__item">
+                    <a href="/chart.html" class="menu-nav__item-link">Charts</a>
+                </li>
+                <li class="menu-nav__item active">
+                    <a href="/news.html" class="menu-nav__item-link" aria-current="page">News</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Charts</h1>
+    <div class="chart-info">
+        <div class="chart-info__item">
+            <div class="chart-info__item-title">Chart 1:</div>
+            <div id="chart1-summary" class="chart-info__item-title-count red">136 GB</div>
+        </div>
+        <div class="chart-info__item">
+            <div class="chart-info__item-title">Chart 2:</div>
+            <div id="chart2-summary" class="chart-info__item-title-count blue">42 GB</div>
+        </div>
+    </div>
+
+    <div class="month-slider">
+        <button class="month-slider__arrow" id="prev-month">
+            <img src="/assets/images/icons/IconArrowLeftWhite.svg" alt="">
+        </button>
+        <div id="months" class="months">
+            <button class="month months__btn active" data-month="August, 24">Aug, 24</button>
+            <button class="month months__btn" data-month="September, 24">Sep, 24</button>
+            <button class="month months__btn" data-month="October, 24">Oct, 24</button>
+        </div>
+        <button class="month-slider__arrow" id="next-month">
+            <img src="/assets/images/icons/IconArrowRightWhite.svg" alt="">
+        </button>
+    </div>
+
+    <div id="chart" class="chart">
+        <canvas id="lineChart" width="100%"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
