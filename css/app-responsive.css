@@ -1,58 +1,5 @@
-:root {
-    --color-background: #f9f9f9;
-    --color-primary: #000000;
-    --color-secondary: #ffffff;
-    --color-accent: #002f72;
-    --color-text: #333333;
-    --color-text-second: #666666;
-    --color-muted: #666666;
-    --color-border: #e0e0e0;
 
-    --color-hover: #002f72;
-
-    --bg-news-block: #efefef;
-    --color-meta: #979797;
-
-    --bg-menu-item-bg: #efefef;
-    --bg-logo-primary: #666666;
-    --bg-logo-second: #002f72;
-
-    --transition: 0.3s ease-in-out;
-
-
-    --font-family-base: Arial, sans-serif;
-    --font-size-base: 16px;
-    --font-size-large: 2.2rem;
-    --font-size-semi-medium: 1.2rem;
-    --font-size-medium: 1.3rem;
-    --font-size-small: 0.875rem;
-    --font-size-smaller: 0.74rem;
-
-    --font-size-title-base: 16px;
-    --font-size-title-large: 2.2rem;
-    --font-size-title-semi-medium: 1.2rem;
-    --font-size-title-medium: 1.8rem;
-    --font-size-title-small: 0.875rem;
-    --font-size-title-smaller: 0.74rem;
-
-    --border-radius: 16px;
-    --spacing-small: 8px;
-    --spacing: 16px;
-    --spacing-semimedium: 24px;
-    --spacing-medium: 32px;
-    --spacing-large: 64px;
-
-    --bp-xs: 480px;
-    --bp-small: 768px;
-    --bp-medium: 1024px;
-    --bp-large: 1280px;
-    --bp-xlarge: 1440px;
-}
-
-/* Template BP */
 @media (min-width: 768px) {
-
-    /* Header styles */
     .header {
         flex-direction: row;
         align-items: center;

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/app-responsive.css">
+</head>
+<body>
+<div class="container">
+    <header class="header" role="banner">
+        <a href="#" class="header__logo logo" aria-label="World Trends Home">
+            <span class="logo__icons"></span>
+            World Trends</a>
+        <nav class="header__menu-nav menu-nav" role="navigation" aria-label="Main navigation">
+            <ul class="menu-nav__list">
+                <li class="menu-nav__item">
+                    <a href="/chart.html" class="menu-nav__item-link">Charts</a>
+                </li>
+                <li class="menu-nav__item active">
+                    <a href="/news.html" class="menu-nav__item-link" aria-current="page">News</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Charts</h1>
+    <div class="chart-info">
+        <div class="chart-info__item">
+            <div class="chart-info__item-title">Chart 1</div>
+            <div id="chart1-gb" class="chart-info__item-title-count red">0 GB</div>
+        </div>
+        <div class="chart-info__item">
+            <div class="chart-info__item-title">Chart 2</div>
+            <div id="chart2-gb" class="chart-info__item-title-count blue">0 GB</div>
+        </div>
+    </div>
+
+    <!-- Слайдер с месяцами -->
+    <div class="month-slider js-month-slider">
+        <div class="swiper-container month-slider__container">
+            <div class="swiper-wrapper">
+                <!-- Месяцы (будут динамически добавляться) -->
+            </div>
+            <div class="swiper-button-prev month-slider__arrow month-slider__arrow-prev">
+                <img src="/assets/images/icons/IconArrowLeftWhite.svg" alt="">
+            </div>
+            <div class="swiper-button-next month-slider__arrow month-slider__arrow-next">
+                <img src="/assets/images/icons/IconArrowRightWhite.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <canvas class="chart" id="lineChart" width="400" height="400"></canvas>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/chart2.js"></script>
+</body>
+</html>
